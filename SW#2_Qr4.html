@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/564x/0a/29/9f/0a299ff8ce21d891e2312a3fed9b586b.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border: dotted 2px gray;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .left-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .right-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        .btn-container button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <img src="https://i.pinimg.com/564x/9d/43/03/9d4303eb6df9cf9e6ca76a255c0147d5.jpg" width="300" height="300">
+        </div>
+        <div class="right-content">
+            <div class="input-container">
+                <label for="inputX1">Enter a value for X:</label>
+                <input type="number" id="inputX1">
+            </div>
+            <div class="input-container">
+                <label for="inputY">Enter a value for Y:</label>
+                <input type="number" id="inputY">
+            </div>
+           
+            <div class="btn-container">
+                <button class="btn-product" onclick="calculateProduct()">multiply</button>
+                <button class="btn-exponent" onclick="calculateExponent()">exponent</button>
+                <button class="btn-equality" onclick="calculateEquality()">equality</button>
+                <button class="btn-remainder" onclick="checkRemainder()">remainder</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://i.pinimg.com/564x/85/0f/fd/850ffd8037e66f1deda0c8181d472c7d.jpg" crossorigin="anonymous"></script>
+    <script>
+        function calculateProduct() {
+            var num1 = document.getElementById("inputX1").value;
+            var num2 = document.getElementById("inputY").value;
+            var product = Number(num1) * Number(num2);
+            alert("Star 1 x Star 2 is: " + product);
+        }
+
+        function calculateExponent() {
+            var num1 = document.getElementById("inputX1").value;
+            var num2 = document.getElementById("inputY").value;
+            var raised = Math.pow(Number(num1), Number(num2));
+            alert("Star 1 raised to Star 2 is: " + raised);
+        }
+
+        function calculateEquality() {
+            var num1 = document.getElementById("inputX1").value;
+            var num2 = document.getElementById("inputY").value;
+            var equality = Number(num1) === Number(num2);
+            alert("Star 1 + Star 2: " + equality);
+        }
+
+        function checkRemainder() {
+            var num1 = document.getElementById("inputX1").value;
+            var num2 = document.getElementById("inputY").value;
+            var remainder = Number(num1) % Number(num2);
+            alert("Remainder of Star 1 divided by Star 2: " + remainder);
+        }
+    </script>
+</body>
+</html>
